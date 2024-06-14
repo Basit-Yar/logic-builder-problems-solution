@@ -1,5 +1,6 @@
 package com.learning;
 
+import com.learning.pattern.InvertedRightAngleTriangle;
 import com.learning.pattern.RightAngleTriangle;
 import com.learning.sorting.BubbleSort;
 
@@ -18,8 +19,11 @@ public class Main {
 
         System.out.println("=========== Pattern ============\n");
 
-        RightAngleTriangle rightAngleTriangle = new RightAngleTriangle();
-        rightAngleTriangle.printPattern();
+//        RightAngleTriangle rightAngleTriangle = new RightAngleTriangle();
+//        rightAngleTriangle.printPattern();
+
+        InvertedRightAngleTriangle invertedRightAngleTriangle = new InvertedRightAngleTriangle();
+        invertedRightAngleTriangle.printPattern();
 
         System.out.println("\n===============================");
     }
