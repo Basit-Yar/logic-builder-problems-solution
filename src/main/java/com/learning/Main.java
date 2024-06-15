@@ -6,6 +6,8 @@ import com.learning.pattern.ReverseRightAngleTriangle;
 import com.learning.pattern.RightAngleTriangle;
 import com.learning.sorting.BubbleSort;
 
+import java.security.spec.RSAOtherPrimeInfo;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,9 +32,14 @@ public class Main {
 //        ReverseRightAngleTriangle reverseRightAngleTriangle = new ReverseRightAngleTriangle();
 //        reverseRightAngleTriangle.printPattern();
 
-        ReverseInvertedRightAngleTriangle p4 = new ReverseInvertedRightAngleTriangle();
-        p4.printPattern();
+//        ReverseInvertedRightAngleTriangle p4 = new ReverseInvertedRightAngleTriangle();
+//        p4.printPattern();
+//
+//        System.out.println("\n===============================");
 
-        System.out.println("\n===============================");
+        System.out.println("================ Basic Questions ===============");
+        boolean isArmNum = ArmstrongNumber.isArmstrongNumber(370);
+        System.out.println("Armstrong Number : " + isArmNum);
+        System.out.println("================================================");
     }
 }
