@@ -1,5 +1,8 @@
 package com.learning;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArmstrongNumber {
 
     public static boolean isArmstrongNumber(int num){
@@ -42,5 +45,33 @@ public class ArmstrongNumber {
             return true;
         else
             return false;
+    }
+
+    public static List<Integer> printArmstrongNumberBetweenRange(int from, int to){
+
+         List<Integer> armstrongNumbers = new ArrayList<>();
+
+         for(int i=from; i<=to; i++){
+             int number = i;
+
+             int temp = i;
+             int len = 0;
+             while(temp != 0){
+                 temp /= 10;
+                 len++;
+             }
+
+             int sum = 0;
+             while(number >=1) {
+                 int r = number % 10;
+                 sum += Math.pow(r, len);
+                 number /= 10;
+             }
+
+             if(i == sum)
+                 armstrongNumbers.add(i);
+         }
+
+        return armstrongNumbers;
     }
 }

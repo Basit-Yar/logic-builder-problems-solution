@@ -7,6 +7,7 @@ import com.learning.pattern.RightAngleTriangle;
 import com.learning.sorting.BubbleSort;
 
 import java.security.spec.RSAOtherPrimeInfo;
+import java.util.List;
 
 public class Main {
 
@@ -21,7 +22,7 @@ public class Main {
 //        System.out.println("\n========================");
 
 
-        System.out.println("=========== Pattern ============\n");
+//        System.out.println("=========== Pattern ============\n");
 
 //        RightAngleTriangle rightAngleTriangle = new RightAngleTriangle();
 //        rightAngleTriangle.printPattern();
@@ -38,8 +39,10 @@ public class Main {
 //        System.out.println("\n===============================");
 
         System.out.println("================ Basic Questions ===============");
-        boolean isArmNum = ArmstrongNumber.isArmstrongNumber(370);
-        System.out.println("Armstrong Number : " + isArmNum);
+//        boolean isArmNum = ArmstrongNumber.isArmstrongNumber(370);
+//        System.out.println("Armstrong Number : " + isArmNum);
+        List<Integer> armstrongNums = ArmstrongNumber.printArmstrongNumberBetweenRange(0, 1000);
+        System.out.println(armstrongNums);
         System.out.println("================================================");
     }
 }
