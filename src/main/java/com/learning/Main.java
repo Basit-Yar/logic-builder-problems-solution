@@ -44,7 +44,9 @@ public class Main {
 //        List<Integer> armstrongNums = ArmstrongNumber.printArmstrongNumberBetweenRange(0, 1000);
 //        System.out.println(armstrongNums);
 
-        PrimeNumber.isPrimeNumber(1);
+//        PrimeNumber.isPrimeNumber(1);
+        List<Integer> primeNumbers = PrimeNumber.findPrimeNumbersInRange(-3, 100);
+        System.out.println(primeNumbers);
         System.out.println("================================================");
     }
 }
