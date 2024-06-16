@@ -41,8 +41,10 @@ public class Main {
         System.out.println("================ Basic Questions ===============");
 //        boolean isArmNum = ArmstrongNumber.isArmstrongNumber(370);
 //        System.out.println("Armstrong Number : " + isArmNum);
-        List<Integer> armstrongNums = ArmstrongNumber.printArmstrongNumberBetweenRange(0, 1000);
-        System.out.println(armstrongNums);
+//        List<Integer> armstrongNums = ArmstrongNumber.printArmstrongNumberBetweenRange(0, 1000);
+//        System.out.println(armstrongNums);
+
+        PrimeNumber.isPrimeNumber(1);
         System.out.println("================================================");
     }
 }
