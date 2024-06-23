@@ -17,7 +17,19 @@ public class FibonacciSequence {
         System.out.println("final : " + nextTerm);
 
         // TODO: 6/22/2024 : find the no. of term in sequence ==> 200 
-        // TODO: 6/22/2024 : fibonacci sequence using recursion 
-        
+        // TODO: 6/22/2024 : fibonacci sequence using recursion
+        System.out.println("==================================\n");
+        int fibNum = getFibonacciNum(10);
+        System.out.println(fibNum);
+    }
+
+    private static int getFibonacciNum(int n) {
+
+        if(n==1)
+            return 1;
+        else if(n==0)
+            return 0;
+        else
+            return getFibonacciNum(n-1) + getFibonacciNum(n-2);
     }
 }
