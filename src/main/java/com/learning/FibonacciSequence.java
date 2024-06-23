@@ -16,10 +16,10 @@ public class FibonacciSequence {
         }
         System.out.println("final : " + nextTerm);
 
-        // TODO: 6/22/2024 : find the no. of term in sequence ==> 200 
-        // TODO: 6/22/2024 : fibonacci sequence using recursion
+        // TODO: 6/22/2024 : find the no. of term in sequence ==> 200
         System.out.println("==================================\n");
-        int fibNum = getFibonacciNum(10);
+        int fibonacciNumAtTerm = 12;
+        int fibNum = getFibonacciNum(fibonacciNumAtTerm);
         System.out.println(fibNum);
     }
 
