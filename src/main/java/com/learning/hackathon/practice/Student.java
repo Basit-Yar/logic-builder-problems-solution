@@ -3,12 +3,12 @@ package com.learning.hackathon.practice;
 public class Student {
     private int id;
     private String name;
-    private int totalMarksobt;
+    private int totalMarksObt;
 
     public Student(int id, String name, int totalMarksObtain) {
         this.id = id;
         this.name = name;
-        totalMarksobt = totalMarksObtain;
+        totalMarksObt = totalMarksObtain;
     }
 
     // ********** Setters of all attributes
@@ -21,8 +21,8 @@ public class Student {
         this.name = name;
     }
 
-    public void setTotalMarksobt(int totalMarksobt) {
-        this.totalMarksobt = totalMarksobt;
+    public void setTotalMarksObt(int totalMarksObt) {
+        this.totalMarksObt = totalMarksObt;
     }
 
     // ********** Getters of all attributes
@@ -35,7 +35,7 @@ public class Student {
         return name;
     }
 
-    public int getTotalMarksobt() {
-        return totalMarksobt;
+    public int getTotalMarksObt() {
+        return totalMarksObt;
     }
 }
