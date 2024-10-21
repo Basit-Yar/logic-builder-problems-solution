@@ -1,6 +1,7 @@
 package com.learning.ipa.practice;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Solution_01_02 {
     public static void main(String[] args) {
@@ -22,9 +23,17 @@ public class Solution_01_02 {
         return lowestRuns;
     }
 
-    // TODO: 10/22/2024 : The method should return the array of Player objects belonging to the matchType passed as input parameter in Descending order of playerID. 
-    public static void findPlayerByMatchType(Player[] players, String matchType) {
-        
+    /** The method should return the array of Player objects belonging to the matchType passed
+     *  as input parameter in Descending order of playerID.
+     */
+    public static Player[] findPlayerByMatchType(Player[] players, String matchType) {
+
+        Player[] requiredPlayers = Arrays.stream(players)
+                .filter(player -> player.getMatchType().equalsIgnoreCase(matchType))
+                .sorted(Comparator.comparing(Player::getPlayerId).reversed())
+                .toArray(Player[]::new);
+
+        return requiredPlayers;
     }
 
 }
