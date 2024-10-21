@@ -21,7 +21,7 @@ public class Solution_01 {
             String studentName = scan.nextLine();
             int studentTotalMarks = scan.nextInt();
 
-//            System.out.println("Student Id : " + studentId + ", name: " + studentName + ", and marks: " + studentTotalMarks + ".");
+            System.out.println("Student Id : " + studentId + ", name: " + studentName + ", and marks: " + studentTotalMarks + ".");
 
             if (studentTotalMarks > 400 || studentTotalMarks < 0) {
                 throw new RuntimeException("Please provide a valid value.");
@@ -30,9 +30,9 @@ public class Solution_01 {
             students[i] = new Student(studentId, studentName, studentTotalMarks);
         }
 
-        String str = findStudentWithhighestTotal(students);
-        List<Integer> studentIds = searchStudentsBypercentage(students);
-//        System.out.println("********************");
+        String str = findStudentWithHighestTotal(students);
+        List<Integer> studentIds = searchStudentsByPercentage(students);
+        System.out.println("********************");
         System.out.println(str);
         if (studentIds != null)
             studentIds.forEach(id -> System.out.println(id));
@@ -40,24 +40,24 @@ public class Solution_01 {
             System.out.println("No Student found with mentioned attribute.");
     }
 
-    public static String findStudentWithhighestTotal(Student[] students) {
+    public static String findStudentWithHighestTotal(Student[] students) {
         int highestTotal = 0;
         String highestmarksObtainStudentName = "";
 
         for (int i=0; i< students.length; i++) {
 
-            if (highestTotal < students[i].getTotalMarksobt()) {
+            if (highestTotal < students[i].getTotalMarksObt()) {
                 highestmarksObtainStudentName = students[i].getName();
-                highestTotal = students[i].getTotalMarksobt();
+                highestTotal = students[i].getTotalMarksObt();
             }
         }
         return highestmarksObtainStudentName.toUpperCase();
     }
 
-    public static List<Integer> searchStudentsBypercentage(Student[] students) {
+    public static List<Integer> searchStudentsByPercentage(Student[] students) {
         int totalSubjects = 4;
         List<Integer> studentsIds = Arrays.stream(students)
-                .filter(student -> student.getTotalMarksobt() * 1/ (double) totalSubjects > 70)
+                .filter(student -> student.getTotalMarksObt() * 1/ (double) totalSubjects > 70)
                 .map(student -> student.getId())
                 .sorted()
                 .collect(Collectors.toList());
