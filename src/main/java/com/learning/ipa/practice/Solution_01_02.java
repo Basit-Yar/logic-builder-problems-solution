@@ -1,10 +1,42 @@
 package com.learning.ipa.practice;
 
+import java.sql.Array;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Solution_01_02 {
     public static void main(String[] args) {
+
+        Player[] players = new Player[4];
+        Scanner scan = new Scanner(System.in);
+
+        /**
+         * to read the values of four Player objects referring attributes in the above-mentioned attribute sequence.         *
+         */
+
+        for (int i=0; i<players.length; i++) {
+            int playerId = scan.nextInt();
+            scan.nextLine();
+            String playerName = scan.nextLine();
+            int runs = scan.nextInt();
+            scan.nextLine();
+            String playerType = scan.nextLine();
+            String matchType = scan.nextLine();
+
+            players[i] = new Player(playerId, playerName, runs, playerType, matchType);
+            System.out.println(players[i]);
+        }
+
+        /**
+         * to read the value of two string parameter for capturing player type and match type.
+         */
+
+        System.out.print("Enter the player type: ");
+        String playerType = scan.nextLine();
+        System.out.print("Enter the match type: ");
+        String matchType = scan.nextLine();
 
     }
 
