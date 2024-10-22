@@ -1,7 +1,5 @@
 package com.learning.ipa.practice;
 
-import java.sql.Array;
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -50,7 +48,6 @@ public class Solution_01_02 {
         if (requiredPlayers != null)
             Arrays.stream(requiredPlayers)
                     .map(player -> player.getPlayerId())
-//                    .peek(id-> System.out.println(id));
                     .forEach(System.out::println);
         else
             System.out.println("No Player with given matchType");
@@ -81,6 +78,8 @@ public class Solution_01_02 {
                 .sorted(Comparator.comparing(Player::getPlayerId).reversed())
                 .toArray(Player[]::new);
 
+        if (requiredPlayers.length < 1)
+            return null;
         return requiredPlayers;
     }
 

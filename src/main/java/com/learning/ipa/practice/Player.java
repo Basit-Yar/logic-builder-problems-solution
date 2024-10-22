@@ -55,4 +55,15 @@ public class Player {
     public void setMatchType(String matchType) {
         this.matchType = matchType;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "playerId=" + playerId +
+                ", playerName='" + playerName + '\'' +
+                ", runs=" + runs +
+                ", playerType='" + playerType + '\'' +
+                ", matchType='" + matchType + '\'' +
+                '}';
+    }
 }
