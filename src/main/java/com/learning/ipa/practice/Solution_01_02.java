@@ -38,6 +38,22 @@ public class Solution_01_02 {
         System.out.print("Enter the match type: ");
         String matchType = scan.nextLine();
 
+        int lowestRuns = findPlayerWithLowestRuns(players, playerType);
+
+        if (lowestRuns > 0)
+            System.out.println(lowestRuns);
+        else
+            System.out.println("No such player");
+
+        Player[] requiredPlayers = findPlayerByMatchType(players, matchType);
+
+        if (requiredPlayers != null)
+            Arrays.stream(requiredPlayers)
+                    .map(player -> player.getPlayerId())
+//                    .peek(id-> System.out.println(id));
+                    .forEach(System.out::println);
+        else
+            System.out.println("No Player with given matchType");
     }
 
     /**
