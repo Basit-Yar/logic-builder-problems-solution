@@ -34,6 +34,14 @@ public class BusinessLogic {
      * @return
      */
     public List<Book> calculateDiscountedPrice(List<Book> books, String genre, double discount) {
-        return null;
+        return books.stream()
+                .filter(book -> book.getGenre().equalsIgnoreCase(genre))
+                .map(book -> {
+                    double price = book.getPrice();
+                    double discountedPrice = price - (price - discount * 1/100);
+                    book.setPrice(discountedPrice);
+                    return book;
+                })
+                .collect(Collectors.toList());
     }
 }
