@@ -22,6 +22,17 @@ public class BusinessLogic {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * It should find the books matching the genre and apply the discount to the book.
+     * It should return list of books matching the genre after applying the discount.
+     *
+     * Discounted Price = Price - (Price * discount % )
+     *
+     * @param books
+     * @param genre
+     * @param discount
+     * @return
+     */
     public List<Book> calculateDiscountedPrice(List<Book> books, String genre, double discount) {
         return null;
     }
