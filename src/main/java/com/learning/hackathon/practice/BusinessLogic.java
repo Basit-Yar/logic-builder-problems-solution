@@ -16,7 +16,7 @@ public class BusinessLogic {
      * @param genre
      * @return
      */
-    public List<Book> getBooksBelongingToAGenre(List<Book> books, String genre) {
+    public static List<Book> getBooksBelongingToAGenre(List<Book> books, String genre) {
         return books.stream()
                 .filter(book -> book.getGenre().equalsIgnoreCase(genre))
                 .collect(Collectors.toList());
@@ -33,7 +33,7 @@ public class BusinessLogic {
      * @param discount
      * @return
      */
-    public List<Book> calculateDiscountedPrice(List<Book> books, String genre, double discount) {
+    public static List<Book> calculateDiscountedPrice(List<Book> books, String genre, double discount) {
         return books.stream()
                 .filter(book -> book.getGenre().equalsIgnoreCase(genre))
                 .map(book -> {
