@@ -38,8 +38,8 @@ public class BusinessLogic {
                 .filter(book -> book.getGenre().equalsIgnoreCase(genre))
                 .map(book -> {
                     double price = book.getPrice();
-                    double discountedPrice = price - (price - discount * 1/100);
-                    book.setPrice(discountedPrice);
+                    double discountedPrice = price * discount * 1/100;
+                    book.setPrice(price - discountedPrice);
                     return book;
                 })
                 .collect(Collectors.toList());

@@ -21,30 +21,42 @@ public class Solution_02 {
          */
 
         Scanner scan = new Scanner(System.in);
+        System.out.print("Enter total numbers of Authors: ");
         int numOfAuthors = scan.nextInt();
 
         List<Book> books = new ArrayList<>();
 
         for(int i=0; i<numOfAuthors; i++) {
 
+            System.out.print("Enter Author ID: ");
             int authorId = scan.nextInt();
             scan.nextLine();
+            System.out.print("Enter the Author name: ");
             String authorName = scan.nextLine();
 
             Author author = new Author(authorId, authorName);
 
+            System.out.print("Enter the book ID: ");
             int bookId = scan.nextInt();
             scan.nextLine();
+            System.out.print("Enter the book title: ");
             String bookTitle = scan.nextLine();
+            System.out.print("Enter the book genre: ");
             String genre = scan.nextLine();
+            System.out.print("Enter the book price: ");
             double price = scan.nextDouble();
 
             Book book = new Book(bookId, bookTitle, genre, price, author);
             books.add(book);
+            System.out.println("The new book has been added!");
         }
 
         scan.nextLine();
+        System.out.print("Provide Genre: ");
         String genre = scan.nextLine();
+        System.out.print("Provide a Genre for the discount's books: ");
+        String genreNew = scan.nextLine();
+        System.out.print("Provided Discount: ");
         double discount = scan.nextDouble();
 
         List<Book> booksBelongingToAGenre = BusinessLogic.getBooksBelongingToAGenre(books, genre);
@@ -60,7 +72,7 @@ public class Solution_02 {
 
         System.out.println("\nDiscounted " + genre + " Books:");
 
-        List<Book> booksWithDiscountPrice = BusinessLogic.calculateDiscountedPrice(books, genre, discount);
+        List<Book> booksWithDiscountPrice = BusinessLogic.calculateDiscountedPrice(books, genreNew, discount);
         if (!booksWithDiscountPrice.isEmpty()) {
             booksWithDiscountPrice.stream()
                     .forEach(book -> {
